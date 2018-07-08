@@ -44,6 +44,6 @@ The raycasts between the line segment and the sides of the Rect are also optimiz
 -----
 
 # Notes
-- Note that this approach is specifically optimized for cases where intersections are rare. If intersections were much more common then a brute force approach of testing the 4 sides until 2 hits are found would be marginally faster.
+- This approach is *specifically optimized for cases where intersections are rare*. If intersections were much more common then a brute force approach of testing the 4 sides until 2 hits are found might be marginally faster.
 - If you only need the point of entry you could modify the lookup table to only store that, and simply return after that first raycast pass.
 - While I did some preliminary benchmarking during testing I don't feel it's extensive enough to warrant including here. Benchmarking was performed against the approach listed here https://stackoverflow.com/a/38944633/928062 which only returns the entry point.
