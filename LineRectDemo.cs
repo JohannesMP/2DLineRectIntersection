@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEditor;
-using Utils;
+using Raycast2DUtils;
 
 // For in-editor testing only, so place in an 'Editor' folder
 public class LineRectDemo : MonoBehaviour

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Utils
+namespace Raycast2DUtils
 {
     /// <summary>
     /// Find the 0, 1 or 2 intersections between a line segment and an axis-aligned Rect.
