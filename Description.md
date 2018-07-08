@@ -10,7 +10,7 @@ In my use case the vast majority of lines are *either* completely inside *or* co
 
 # Approach
 
-To solve this we Divide the Rect into the following sectors:
+We Divide the Rect into the following sectors:
 ```
 S0| S1 |S2
 --+----+--
