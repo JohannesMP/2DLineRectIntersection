@@ -55,7 +55,7 @@ namespace Raycast2DUtils
         /// <summary>
         /// What raycasts to perform for a given sectors a line segment ends and statrs in, and whether to check for entering or exiting.
         /// </summary>
-        /// This pre-computed lookup tables enables us to bypass lots of potential conditionals.
+        /// This pre-computed lookup tables enables us to avoid unecessary raycasts.
         /// 
         /// Lookup is done as follows: [Sector1, Sector2, state(0:1)]
         ///     - state == 0: the line segment is entering the Rect
