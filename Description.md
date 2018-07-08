@@ -54,3 +54,7 @@ The raycasts between the line segment and the sides of the Rect are also optimiz
 - If you only need the point of entry you could modify the lookup table to only store that, and simply return after that first raycast pass.
 - This approach returns the parametric representation of the intersection and not a specific point. That is because in my use-case I actually don't need the point, but rather the fraction along the line where it intersects, which I then use to perform further calculations on. It also makes handling non-intersections easier.
 - While I did some preliminary benchmarking during testing I don't feel it's extensive enough to warrant including here. Benchmarking was performed against the approach listed here https://stackoverflow.com/a/38944633/928062 which only returns the entry point.
+
+# References
+- https://ncase.me/sight-and-light/ : 2D Lighting tutorial that does a good job of explaining how to derive the parametric equation for line intersections. 
+  - Note that their final `T1 = ...` formula can divide by zero. See the issue here: https://github.com/ncase/sight-and-light/issues/3

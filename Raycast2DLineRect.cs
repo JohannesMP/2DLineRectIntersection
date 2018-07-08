@@ -241,7 +241,7 @@ namespace Raycast2DUtils
         /// <summary>
         /// Check if a given line segment and a strictly Horizontal line segment intersect. float.PositiveInfinity if no hit.
         /// </summary>
-        /// /// <param name="width">The width of the horizontal line segment</param>
+        /// /// <param name="width">The width of the horizontal line segment. Is Assumed non-zero.</param>
         /// <returns>The parametric fraction where the intersection lies on the 'from' segment. float.PositiveInfinity if no intersection</returns>
         private static float RayToHoriz(Vector2 fromPoint, Vector2 fromDir, float x, float y, float width)
         {
@@ -259,7 +259,7 @@ namespace Raycast2DUtils
         /// <summary>
         /// If a given line segment and a strictly Vertical line segment intersect. float.PositiveInfinity if no intersection.
         /// </summary>
-        /// <param name="height">The height of the vertical line segment</param>
+        /// <param name="height">The height of the vertical line segment. Is Assumed non-zero.</param>
         /// <returns>The parametric fraction where the intersection lies on the 'from' segment. float.PositiveInfinity if no intersection</returns>
         private static float RayToVert(Vector2 fromPoint, Vector2 fromDir, float x, float y, float height)
         {
