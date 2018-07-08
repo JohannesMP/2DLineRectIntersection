@@ -1,6 +1,6 @@
 # Overview
 
-I needed a really efficient way to get the intersection points between a line segment (as defined by two `Vector2`) and an axis-aligned `Rect` in 2D space, where the intersection points are returned as a parametric fraction of the length of the original line segment:
+For a 2D Unity Project, I needed a really efficient way to get the intersection points between a line segment (as defined by two `Vector2`) and an axis-aligned `Rect` in 2D space, where the intersection points are returned as a parametric fraction of the length of the original line segment:
 
 ![](https://i.imgur.com/XL6NVkd.gif)
 
