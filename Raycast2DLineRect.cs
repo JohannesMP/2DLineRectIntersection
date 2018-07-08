@@ -134,7 +134,7 @@ namespace Raycast2DUtils
         };
 
         /// <summary>
-        /// Check if a given line segment intersects an axis-aligned Rect
+        /// Find intersects of a Line segment and an axis-aligned Rect
         /// </summary>
         public static void RaycastLineRect(Vector2 begin, Vector2 end, Rect rect, ref LineRectResult res)
         {
