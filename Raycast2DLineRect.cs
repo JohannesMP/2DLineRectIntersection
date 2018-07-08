@@ -53,7 +53,7 @@ namespace Raycast2DUtils
         }
 
         /// <summary>
-        /// What raycasts to perform for a given sectors a line segment ends and statrs in, and whether to check for entering or exiting.
+        /// What raycasts to perform for the sectors a line segment ends and statrs in, and whether to check for entering or exiting.
         /// </summary>
         /// This pre-computed lookup tables enables us to avoid unecessary raycasts.
         /// 
