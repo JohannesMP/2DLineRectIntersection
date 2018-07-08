@@ -10,7 +10,7 @@ In my use case the vast majority of lines are *either* completely inside *or* co
 
 # Approach
 
-We Divide the Rect into the following sectors:
+We divide the Rect into the following sectors:
 ```
 S0| S1 |S2
 --+----+--
@@ -35,7 +35,7 @@ For example:
   - `Exit`: Can only hit edge **S5**
   - `Result`: **2 or 3** raycasts.
 
-All possible permutations of Start and End Sector and if we are checking for entering or exiting the rect is pre-computed in a static lookup table of `9 * 9 * 2 = 162` elements.
+All possible permutations of Start and End Sector and if we are checking for entering or exiting the rect are pre-computed in a static lookup table of `9 * 9 * 2 = 162` elements.
 
 That means at runtime, we determine the Sector of the start and end point, then perform the raycasts for entering and exiting the rect as determined by the lookup table.
 
