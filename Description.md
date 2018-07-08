@@ -1,4 +1,4 @@
-I needed a really efficient way to get the intersection points between a line segment (as defined by two `Vector2`) and an axis-aligned `Rect` in 2D space, where the intersection points are a parametric fraction of the length of the original line segment:
+I needed a really efficient way to get the intersection points between a line segment (as defined by two `Vector2`) and an axis-aligned `Rect` in 2D space, where the intersection points are returned as a parametric fraction of the length of the original line segment:
 
 ![](https://i.imgur.com/XL6NVkd.gif)
 _note how when the line intersects the rect, the green line represents the portion inside the rect, and the parametric representation of the point of intersection along the line is displayed_
