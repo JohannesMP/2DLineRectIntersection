@@ -4,7 +4,7 @@ I needed a really efficient way to get the intersection points between a line se
 
 ![](https://i.imgur.com/XL6NVkd.gif)
 
-_note how when the line intersects the rect, the green line represents the portion inside the rect, and the parametric representation of the point of intersection along the line is displayed_
+_Note how when the line intersects the rect, the green line represents the portion inside the rect, and the parametric representation of the point of intersection along the line is displayed_
 
 In my use case the vast majority of lines are *either* completely inside *or* completely outside the rect, and so I needed an approach that was very efficient in cases where there is guaranteed no intersection, as well as providing both both the point of entry and point of exit.
 
