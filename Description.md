@@ -18,9 +18,9 @@ Where S4 is the Rect itself.
 For a given set of sectors and whether we are checking for entering or exiting the Rect, we know what Raycasts need to be performed.
 
 For example:
-- A line from Sector 0 to Sector 1 can never hit the rect - No raycast.
-- A line from Sector 4 to Sector 7 is already inside the rect, and can only exit the rect at the edge of S7 - One raycast.
-- A line from Sector 6 to Sector 5 could hit either edge S6 or S6 on the way into the rect, and could only leave the rect at edge S5 - Two or Three raycasts.
+- A line from **Sector 0** to **Sector 1** can never hit the rect - **No** raycast.
+- A line from **Sector 4** to **Sector 7** is already inside the rect, and can only exit the rect at the edge of S7 - **One** raycast.
+- A line from **Sector 6** to **Sector 5** could hit either edge S6 or S6 on the way into the rect, and could only leave the rect at edge S5 - **Two or Three** raycasts.
 
 All possible permutations of Start and End Sector and if we are checking for entering or exiting the rect is pre-computed in a static lookup table of `9 * 9 * 2 = 162` elements.
 
