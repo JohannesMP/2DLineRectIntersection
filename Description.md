@@ -55,7 +55,7 @@ The raycasts between the line segment and the sides of the Rect are also optimiz
 # Notes
 - This approach is specifically optimized for cases where the majority of line segments tested don't intersect with the Rect, and either lie completely inside or completely outside. If intersections were much more common then a brute force approach of testing the 4 sides until 2 hits are found might be marginally faster.
 - If you only need the point of entry you could modify the lookup table to only store that, and simply return after that first raycast pass.
-- This approach returns the parametric representation of the intersection and not a specific point. That is because in my use-case I actually don't need the point, but rather the fraction along the line where it intersects, which I then use to perform further calculations on. It also makes handling non-intersections easier.
+- This approach returns the parametric representation of the intersection and not a specific point. That is because in my use-case I actually don't need the point, but rather the fraction along the line where it intersects, which I then use in further calculations. It also makes handling non-intersections easier.
 - While I did some preliminary benchmarking during testing I don't feel it's extensive enough to warrant including here. Benchmarking was performed against the approach listed here https://stackoverflow.com/a/38944633/928062 which only returns the entry point.
 
 # References
