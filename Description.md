@@ -19,16 +19,16 @@ For a given set of sectors and whether we are checking for entering or exiting t
 
 For example:
 - From **Sector 0** to **Sector 1**
-  - Enter/Exit: Can never hit the rect 
-  - Result: **No** raycast.
+  - `Enter`/`Exit`: Can never hit the rect 
+  - `Result`: **0** raycasts.
 - From **Sector 4** to **Sector 7**: 
-  - Enter: Already inside the rect
-  - Exit: Can only hit edge **S7**
-  - Result: **One** raycast.
+  - `Enter`: Already inside the rect
+  - `Exit`: Can only hit edge **S7**
+  - `Result`: **1** raycast.
 - From **Sector 6** to **Sector 5**
-  - Enter: Can hit either edge **S6** *or* **S6** 
-  - Exit: Can only hit edge **S5**
-  - Result: **Two or Three** raycasts.
+  - `Enter`: Can hit either edge **S6** *or* **S6** 
+  - `Exit`: Can only hit edge **S5**
+  - `Result`: **2 or 3** raycasts.
 
 All possible permutations of Start and End Sector and if we are checking for entering or exiting the rect is pre-computed in a static lookup table of `9 * 9 * 2 = 162` elements.
 
