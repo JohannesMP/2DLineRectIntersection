@@ -1,12 +1,16 @@
+# Overview
+
 I needed a really efficient way to get the intersection points between a line segment (as defined by two `Vector2`) and an axis-aligned `Rect` in 2D space, where the intersection points are returned as a parametric fraction of the length of the original line segment:
 
 ![](https://i.imgur.com/XL6NVkd.gif)
 
 _note how when the line intersects the rect, the green line represents the portion inside the rect, and the parametric representation of the point of intersection along the line is displayed_
 
-In my use case the vast majority of lines are either completely inside or completely outside the rect, and so I needed an approach that gave both the point of entry and point of exit, but was very efficient in cases where there is guaranteed no intersection.
+In my use case the vast majority of lines are *either* completely inside *or* completely outside the rect, and so I needed an approach that was very efficient in cases where there is guaranteed no intersection, as well as providing both both the point of entry and point of exit.
 
-To solve this we Divide the Rect into the followign sectors:
+# Approach
+
+To solve this we Divide the Rect into the following sectors:
 ```
 S0| S1 |S2
 --+----+--
@@ -37,5 +41,9 @@ That means at runtime, we determine the Sector of the start and end point, then 
 
 The raycasts between the line segment and the sides of the Rect are also optimized to either solve for a horizontal side intersection or a vertical, since the sides of the rect are always axis aligned.
 
+-----
 
-Note that this approach is specifically optimized for cases where intersections are rare. If intersections were much more common then a brute force approach of testing the 4 sides until 2 hits are found would be marginally faster.
+# Notes
+- Note that this approach is specifically optimized for cases where intersections are rare. If intersections were much more common then a brute force approach of testing the 4 sides until 2 hits are found would be marginally faster.
+- If you only need the point of entry you could modify the lookup table to only store that, and simply return after that first raycast pass.
+- While I did some preliminary benchmarking during testing I don't feel it's extensive enough to warrant including here. Benchmarking was performed against the approach listed here https://stackoverflow.com/a/38944633/928062 which only returns the entry point.
