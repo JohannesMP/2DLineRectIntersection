@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace OrbitDemo.Utils
+namespace Utils
 {
     /// <summary>
     /// Find the 0, 1 or 2 intersections between a line segment and an axis-aligned Rect.
