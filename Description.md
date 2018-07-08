@@ -20,7 +20,7 @@ S6| S7 |S8
 ```
 Where S4 is the Rect itself.
 
-For a given set of sectors and whether we are checking for entering or exiting the Rect, we know what Raycasts need to be performed.
+For a given set of sectors corresponding to the start and end point of a line segment, and whether we are checking for entering or exiting the Rect, we know what Raycasts could possibly need to be performed.
 
 For example:
 - From **Sector 0** to **Sector 1**
