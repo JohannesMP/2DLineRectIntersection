@@ -31,7 +31,7 @@ For example:
   - `Exit`: Can only hit edge **S7**
   - `Result`: **1** raycast.
 - From **Sector 6** to **Sector 5**
-  - `Enter`: Can hit either edge **S6** *or* **S6** 
+  - `Enter`: Can hit either edge **S3** *or* **S7** 
   - `Exit`: Can only hit edge **S5**
   - `Result`: **2 or 3** raycasts.
 
