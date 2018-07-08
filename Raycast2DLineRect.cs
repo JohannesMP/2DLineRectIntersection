@@ -53,7 +53,7 @@ namespace Raycast2DUtils
         }
 
         /// <summary>
-        /// Pre-computed lookup to quickly know what raycasts to perform, given the sector that a line segment's start and end point are in.
+        /// What raycasts to perform for a given sectors a line segment ends and statrs in, and whether to check for entering or exiting.
         /// </summary>
         /// This pre-computed lookup tables enables us to bypass lots of potential conditionals.
         /// 
