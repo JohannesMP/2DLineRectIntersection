@@ -15,7 +15,7 @@ I also needed both the point of entry and point of exit.
 
 We spacially partition the area around a rect into sectors, and given what sectors the line segment starts and ends in, we can can use a pre-computed lookup table to know what edges of the Rect should be raycast.
 
-This Minimizes the actual raycasts preformed significantly and is very efficient in cases where line segments are often completely inside or compltely outside the rect.
+This minimizes the actual raycasts preformed significantly and is very efficient in cases where line segments are often completely inside or compltely outside the rect.
 
 # Details
 
@@ -44,7 +44,7 @@ For example:
   - `Exit`: Can only hit edge **S5**
   - `Result`: **2 or 3** raycasts.
 
-The necessary raycasts for all possible permutations of (1)Start Sector, (2)End Sector and (3)if we are checking for entering or exiting the rect are pre-computed in a static lookup table of `9 * 9 * 2 = 162` elements.
+The necessary raycasts for all possible permutations of (1)Start Sector, (2)End Sector and (3)if we are checking for entering or exiting the rect are pre-computed in a static lookup table of `9 * 9 * 2 = 162` elements, which I have done offline.
 
 That means at runtime, we determine the Sector of the start and end point, then perform only the raycasts necessary for entering and exiting the rect as determined by the lookup table. Since raycasting the sides of the Rect is the most computationally intensive part, this small bit of pre-processing saves time overall, especially in use cases where lots of line segments are tested but the majority are either completely inside or completely outside of the Rect.
 
