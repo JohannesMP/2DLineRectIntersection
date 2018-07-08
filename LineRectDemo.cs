@@ -1,6 +1,8 @@
 using UnityEngine;
+using UnityEditor;
 using Utils;
 
+// For in-editor testing only, so place in an 'Editor' folder
 public class LineRectDemo : MonoBehaviour
 {
     public GameObject obj1;
@@ -47,8 +49,8 @@ public class LineRectDemo : MonoBehaviour
             Gizmos.color = Color.green;
             Gizmos.DrawLine(entry, exit);
 
-            UnityEditor.Handles.Label(entry, result.t_entry.ToString());
-            UnityEditor.Handles.Label(exit, result.t_exit.ToString());
+            Handles.Label(entry, result.t_entry.ToString());
+            Handles.Label(exit, result.t_exit.ToString());
         }
 
         Gizmos.color = Color.cyan;
