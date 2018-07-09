@@ -75,7 +75,7 @@ namespace Raycast2DUtils
         ///         - A line segment from Sector 0 to 5 enters the rect at the Edges touching corner 0 (Edge 1 and Edge 3)
         ///     RaycastLookup[0,5,1] == S5
         ///         - A line segment from Sector 0 to 5 exits the rect at Edge 5
-        static Sector[,,] RaycastLookup =
+        static readonly Sector[,,] RaycastLookup =
         {
             // From 0 - top left corner
             {
