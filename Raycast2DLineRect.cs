@@ -5,14 +5,14 @@ namespace Raycast2DUtils
     /// <summary>
     /// Find the 0, 1 or 2 intersections between a line segment and an axis-aligned Rect.
     /// </summary>
-    /// Uses spacial partitioning of the rect to perform the bare minimum raycasts necessary.
+    /// Uses spacial partitioning around the rect to perform the bare minimum raycasts necessary.
     ///
     /// Written by JohannesMP 07-07-18, released under the Public Domain - No Rights Reserved.
     ///
     public static class Raycast2DLineRect
     {
         /// <summary>
-        /// Fraction of the line segment where it enters and exits the rect..
+        /// Fraction of the line segment where it enters and exits the rect.
         /// </summary>
         public struct LineRectResult
         {
