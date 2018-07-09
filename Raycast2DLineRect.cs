@@ -245,11 +245,11 @@ namespace Raycast2DUtils
         /// <returns>The parametric fraction where the intersection lies on the 'from' segment. float.PositiveInfinity if no intersection</returns>
         private static float RayToHoriz(Vector2 fromPoint, Vector2 fromDir, float x, float y, float width)
         {
-            // 1. Check if the extended line could intersect the segment
+            // 1. Check if the extended horizontal line could intersect the segment
             float fromParam = (y - fromPoint.y) / fromDir.y;
             if (fromParam < 0 || fromParam > 1)
                 return float.PositiveInfinity;
-            // 2. Check if line could reach the segment
+            // 2. Check if the horizontal line could reach the segment
             float lineParam = (fromPoint.x + fromDir.x * fromParam - x) / width;
             if (lineParam < 0 || lineParam > 1)
                 return float.PositiveInfinity;
@@ -264,10 +264,10 @@ namespace Raycast2DUtils
         private static float RayToVert(Vector2 fromPoint, Vector2 fromDir, float x, float y, float height)
         {
             float fromParam = (x - fromPoint.x) / fromDir.x;
-            // 1. Check if the extended line could intersect the segment
+            // 1. Check if the extended vertical line could intersect the segment
             if (fromParam < 0 || fromParam > 1)
                 return float.PositiveInfinity;
-            // 2. Check if line could reach the segment
+            // 2. Check if the vertical line could reach the segment
             float lineParam = (fromPoint.y + fromDir.y * fromParam - y) / height;
             if (lineParam < 0 || lineParam > 1)
                 return float.PositiveInfinity;
