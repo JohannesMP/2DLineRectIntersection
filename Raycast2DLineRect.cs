@@ -7,7 +7,7 @@ namespace Raycast2DUtils
     /// </summary>
     /// Uses spacial partitioning around the rect to perform the bare minimum raycasts necessary.
     ///
-    /// Written by JohannesMP 07-07-18, released under the Public Domain - No Rights Reserved.
+    /// Written by JohannesMP 2018-07-07, released under the Public Domain - No Rights Reserved.
     ///
     public static class Raycast2DLineRect
     {
